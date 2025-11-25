@@ -1,0 +1,436 @@
+/* CSS Variables for Theme Colors and Typography */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --button-hover: #2980b9;
+  --button-active: #21618c;
+  --font-primary: 'Georgia', serif;
+  --font-secondary: 'Arial', sans-serif;
+  --container-max-width: 800px;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Responsive Typography - Mobile First */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-medium);
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-medium);
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-small);
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Container Styles */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-medium);
+}
+
+.content-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing-large) var(--spacing-medium);
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  margin-bottom: 0;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: var(--spacing-large) var(--spacing-medium);
+  color: #666;
+  font-size: 0.875rem;
+}
+
+/* Tablet and Desktop Typography */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: var(--spacing-large);
+  }
+
+  .content-container {
+    padding: var(--spacing-large) var(--spacing-large);
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+/* Navigation Container */
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-medium);
+}
+
+/* Navigation Buttons */
+.nav-button {
+  display: block;
+  padding: 1rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  background-color: var(--button-active);
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:focus {
+  outline: 3px solid var(--button-hover);
+  outline-offset: 2px;
+}
+
+/* Visual Distinction for Each Button */
+.nav-button:nth-child(1) {
+  background-color: #9b59b6;
+}
+
+.nav-button:nth-child(1):hover {
+  background-color: #8e44ad;
+}
+
+.nav-button:nth-child(1):active {
+  background-color: #7d3c98;
+}
+
+.nav-button:nth-child(2) {
+  background-color: var(--secondary-color);
+}
+
+.nav-button:nth-child(2):hover {
+  background-color: var(--button-hover);
+}
+
+.nav-button:nth-child(2):active {
+  background-color: var(--button-active);
+}
+
+.nav-button:nth-child(3) {
+  background-color: #16a085;
+}
+
+.nav-button:nth-child(3):hover {
+  background-color: #138d75;
+}
+
+.nav-button:nth-child(3):active {
+  background-color: #117a65;
+}
+
+/* Responsive Layout for Tablets and Desktop */
+@media (min-width: 768px) {
+  .navigation-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--spacing-large);
+    padding: var(--spacing-large);
+  }
+
+  .nav-button {
+    flex: 1 1 calc(50% - var(--spacing-large));
+    min-width: 200px;
+    font-size: 1.25rem;
+    padding: 1.25rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-button {
+    flex: 0 1 auto;
+    min-width: 220px;
+  }
+}
+
+/* Content Container Styles for Section Pages */
+.content-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--spacing-large) var(--spacing-medium);
+  line-height: 1.8;
+}
+
+.content-container p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Back Button Styles */
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background-color: #1a252f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.back-button:active {
+  background-color: #0d1419;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Responsive Content Styles */
+@media (min-width: 768px) {
+  .content-container {
+    padding: var(--spacing-large);
+    line-height: 2;
+  }
+
+  .content-container p {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+  }
+
+  .back-button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Mobile-Specific Responsive Design (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Adjust button sizes for mobile touch targets */
+  .nav-button {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  /* Optimize text container width for mobile reading */
+  .content-container {
+    max-width: 100%;
+    padding: var(--spacing-medium);
+    line-height: 1.7;
+  }
+
+  .content-container p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
+  }
+
+  /* Adjust header for mobile */
+  header {
+    padding: var(--spacing-medium);
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust navigation container for mobile */
+  .navigation-container {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-small);
+  }
+
+  /* Ensure back button is appropriately sized */
+  .back-button {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+    min-height: 44px;
+    width: auto;
+  }
+
+  /* Adjust footer for mobile */
+  footer {
+    padding: var(--spacing-medium);
+    font-size: 0.8125rem;
+  }
+}
+
+/* Extra small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  .nav-button {
+    padding: 0.875rem 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .content-container {
+    padding: var(--spacing-small) var(--spacing-small);
+  }
+
+  header {
+    padding: var(--spacing-small) var(--spacing-small);
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Prevent horizontal scrolling on all viewport sizes */
+* {
+  max-width: 100%;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
